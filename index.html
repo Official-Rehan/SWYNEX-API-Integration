@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>PeopleHub - API Integration</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="container header-content">
+
+            <a href="#" class="logo">
+                People<span>Hub</span>
+            </a>
+
+            <p>
+                API Integration Demo
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <p class="label">
+                PUBLIC API PROJECT
+            </p>
+
+            <h1>
+                Explore People
+                <span>Worldwide.</span>
+            </h1>
+
+            <p class="hero-text">
+                This application fetches real user data from a
+                public API and displays it in a responsive interface.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- MAIN -->
+
+    <main class="container main-content">
+
+
+        <!-- SEARCH -->
+
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by name or email...">
+
+            </div>
+
+            <button
+                id="refreshBtn"
+                class="refresh-btn">
+                ↻ Refresh
+            </button>
+
+        </section>
+
+
+        <!-- STATUS -->
+
+        <div
+            id="loading"
+            class="status loading">
+
+            <div class="spinner"></div>
+
+            <h3>Loading users...</h3>
+
+            <p>
+                Fetching data from the public API.
+            </p>
+
+        </div>
+
+
+        <div
+            id="error"
+            class="status error"
+            style="display: none;">
+
+            <div class="error-icon">
+                !
+            </div>
+
+            <h3>
+                Something went wrong
+            </h3>
+
+            <p id="errorMessage">
+                Unable to fetch data.
+            </p>
+
+            <button
+                id="retryBtn"
+                class="retry-btn">
+                Try Again
+            </button>
+
+        </div>
+
+
+        <!-- USERS -->
+
+        <section id="usersSection">
+
+            <div class="results-header">
+
+                <div>
+
+                    <p class="label">
+                        API RESULTS
+                    </p>
+
+                    <h2>
+                        Users
+                    </h2>
+
+                </div>
+
+                <span id="resultCount">
+                    0 users
+                </span>
+
+            </div>
+
+
+            <div
+                id="userGrid"
+                class="user-grid">
+            </div>
+
+
+            <div
+                id="noResults"
+                class="no-results"
+                style="display: none;">
+
+                <div class="empty-icon">
+                    ?
+                </div>
+
+                <h3>
+                    No users found
+                </h3>
+
+                <p>
+                    Try searching with another name or email.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container footer-content">
+
+            <div>
+
+                <div class="footer-logo">
+                    People<span>Hub</span>
+                </div>
+
+                <p>
+                    Built with HTML, CSS, JavaScript and a public API.
+                </p>
+
+            </div>
+
+            <p>
+                © 2026 PeopleHub
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
